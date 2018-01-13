@@ -70,7 +70,16 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
   Loop through the given array backwards alerting every item in the array starting at the end.\
 */
 
-//Code Here
+function reversedLooper (letters) {
+  var newArr = [];
+  for (i = 0; i < 3; i++) {
+    alert(letters[i]);
+    newArr[i] = letters.reverse();
+  }
+  return newArr;
+}
+
+//reversedLooper(letters);
 
 
 
@@ -85,8 +94,15 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
   Return only the even numbers from the array.
 */
 
-//Code Here
-
+function evenFinder (nums) {
+  var evenNums = [];
+  for (i = 0; i < nums.length; i++) {
+    if (nums[i] % 2 === 0) {
+      evenNums.push(nums[i]);
+    }
+  }
+  return evenNums;
+}
 
 
 ////////// EXTRA PRACTICE PROBLEMS BELOW //////////
@@ -102,7 +118,21 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
   Have divider return an Array with the first item in the array being the evens array (all the even values from numbersArray) and the second item in the Array being the odds array (all the odd values from numbersArray).
 */
 
-//Code Here
+function divider (numbersArray) {
+  var evens = [];
+  var odds = [];
+  for (i=0; i < numbersArray.length; i++) {
+    if(numbersArray[i] % 2 === 0) {
+      evens.push(numbersArray[i]);
+    } else {
+      odds.push(numbersArray[i]);
+    }
+  }
+  console.log(evens);
+  console.log(odds);
+}
+
+console.log(divider(numbersArray));
 
 
 
